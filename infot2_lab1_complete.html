@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kurt Jessie I. Molo — BSIT</title>
+
+    <style>
+
+        /* =====================================================
+           GENERAL
+           ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #12343b;
+            background-color: #e8f7f8;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            font-family: Georgia, serif;
+            color: #006994;
+        }
+
+        a {
+            color: #007c91;
+        }
+
+        a:hover {
+            color: #00a6a6;
+        }
+
+        .wrap {
+            max-width: 780px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+           ===================================================== */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: #ffffff;
+            border-bottom: 1px solid #9bd7df;
+            padding: 15px 0;
+        }
+
+        nav .wrap {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            margin-left: 18px;
+            text-decoration: none;
+        }
+
+        nav .brand {
+            font-family: Georgia, serif;
+            font-weight: bold;
+            font-size: 19px;
+            color: #005b73;
+            margin-right: auto;
+        }
+
+
+        /* =====================================================
+           SECTIONS
+           ===================================================== */
+
+        section {
+            padding: 50px 0;
+            border-bottom: 1px solid #9bd7df;
+        }
+
+
+        /* =====================================================
+           HERO / TAG
+           ===================================================== */
+
+        .tag {
+            display: inline-block;
+            font-size: 13px;
+            color: #005b73;
+            background-color: #c9eef1;
+            padding: 4px 10px;
+            margin-bottom: 15px;
+        }
+
+
+        /* =====================================================
+           SKILLS AND HOBBIES
+           ===================================================== */
+
+        .cols {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .cols .box {
+            flex: 1;
+            min-width: 0;
+        }
+
+        ul.skills,
+        ol.hobbies {
+            padding-left: 20px;
+        }
+
+        ul.skills li,
+        ol.hobbies li {
+            padding: 6px 0;
+        }
+
+
+        /* =====================================================
+           IMAGE
+           ===================================================== */
+
+        .photo {
+            width: 100%;
+            max-width: 600px;
+            border: 1px solid #8acbd5;
+        }
+
+        figcaption {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #39747c;
+            text-align: center;
+        }
+
+
+        /* =====================================================
+           TABLE
+           ===================================================== */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #9bd7df;
+        }
+
+        th {
+            color: #005b73;
+            background-color: #d4f2f4;
+        }
+
+
+        /* =====================================================
+           FORM
+           ===================================================== */
+
+        form {
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 14px;
+            color: #124b5a;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 14px;
+            border: 1px solid #8acbd5;
+            background-color: #ffffff;
+        }
+
+        button {
+            background-color: #006994;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #00a6a6;
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           MEDIA BOX
+           ===================================================== */
+
+        .media-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+            align-items: stretch;
+        }
+
+        .media-box {
+            background-color: #ffffff;
+            border: 2px solid #8acbd5;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 0;
+            box-shadow: 0 4px 10px rgba(0, 105, 148, 0.15);
+
+            flex: 1 1 250px;
+            min-width: 0;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .media-box h2,
+        .media-box h3 {
+            width: 100%;
+            margin-top: 0;
+            text-align: center;
+            color: #005b73;
+            font-family: Georgia, serif;
+        }
+
+        .media-box p {
+            color: #39747c;
+        }
+
+
+        /* =====================================================
+           PICTURES
+           ===================================================== */
+
+        .media-box img {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            height: 250px;
+            object-fit: cover;
+
+            border-radius: 10px;
+            border: 2px solid #9bd7df;
+
+            margin: 0 auto 15px auto;
+        }
+
+        .media-box .favorite-photo {
+            width: 100%;
+            max-width: 300px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+
+        /* =====================================================
+           VIDEO
+           ===================================================== */
+
+        .media-box video {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+            border: 2px solid #8acbd5;
+
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           AUDIO
+           ===================================================== */
+
+        .media-box audio {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+
+            margin: 10px auto 0 auto;
+        }
+
+
+        /* =====================================================
+           FAVORITE PICTURE SECTION
+           ===================================================== */
+
+        .picture-box {
+            width: 100%;
+        }
+
+        .picture-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .picture-row img {
+            width: 100%;
+            max-width: 280px;
+            height: 280px;
+            object-fit: cover;
+
+            border: 2px solid #9bd7df;
+            border-radius: 10px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        footer {
+            background-color: #005b73;
+            color: #d9f3f5;
+            padding: 40px 0;
+        }
+
+        footer a {
+            color: #7ee8e8;
+        }
+
+        address {
+            font-style: normal;
+            color: #b7dfe4;
+        }
+
+
+        /* =====================================================
+           MOBILE RESPONSIVE DESIGN
+           ===================================================== */
+
+        @media (max-width: 600px) {
+
+            .wrap {
+                padding: 0 15px;
+            }
+
+            nav .wrap {
+                flex-wrap: wrap;
+            }
+
+            nav .brand {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+
+            .cols {
+                display: block;
+            }
+
+            .cols .box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .media-container {
+                display: block;
+            }
+
+            .media-box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .media-box img {
+                width: 100%;
+                max-width: 300px;
+                height: 250px;
+            }
+
+            .media-box video {
+                width: 100%;
+                height: auto;
+                max-height: 300px;
+            }
+
+            .media-box audio {
+                width: 100%;
+            }
+
+            .picture-row {
+                display: block;
+            }
+
+            .picture-row img {
+                display: block;
+                width: 100%;
+                max-width: 300px;
+                height: 280px;
+                margin: 0 auto 20px auto;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            th,
+            td {
+                padding: 7px;
+            }
+        }
+
+    </style>
+
+
+    <script>
+
+        /* =====================================================
+           ONLY ONE MEDIA ITEM CAN PLAY AT A TIME
+           ===================================================== */
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const mediaItems = document.querySelectorAll("audio, video");
+
+            mediaItems.forEach(function (media) {
+
+                media.addEventListener("play", function () {
+
+                    mediaItems.forEach(function (otherMedia) {
+
+                        if (otherMedia !== media) {
+                            otherMedia.pause();
+                        }
+
+                    });
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         TASK 3: NAVIGATION LINKS
+         ===================================================== -->
+
+    <nav>
+
+        <div class="wrap">
+
+            <span class="brand">
+                Kurt Jessie I. Molo
+            </span>
+
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#work">Websites</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         TASK 1: BASIC WEBPAGE STRUCTURE
+         ===================================================== -->
+
+    <section>
+
+        <div class="wrap">
+
+            <span class="tag">
+                BSIT • College of Computing and Information Sciences
+            </span>
+
+            <h1>
+                Welcome to my webpage
+            </h1>
+
+            <p>
+                Hello I'm Kurt Jessie I. Molo.
+                I am a Bachelor of Science in Information Technology
+                student from BSIT 2A.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TASK 2: ABOUT ME
+         ===================================================== -->
+
+    <section id="about">
+
+        <div class="wrap">
+
+            <h2>About Me</h2>
+
+            <div class="media-box">
+
+                <img
+                    class="photo"
+                    src="Me.jpg"
+                    alt="A smiling person with long dark hair sitting on a couch"
+                    width="300"
+                    height="300"
+                >
+
+                <p>
+                    I lived at San Antonio, Culasi. I graduated at St. Micheal
+                    HighSchool in Culasi. When I have a free time, I just read,
+                    draw or editing. I like spicy foods even though I'm low
+                    tolerance at spices.
+                </p>
+
+                <p>
+                    As an Information Technology student, I am interested
+                    in improving my creativity and technical skills through
+                    editing, drawing, and designing.
+                </p>
+
+                <p class="quote">
+                    "Creativity allows us to turn ideas into something meaningful."
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TASK 4: SKILLS AND HOBBIES
+         ===================================================== -->
+
+    <section id="skills">
+
+        <div class="wrap">
+
+            <div class="cols">
+
+                <!-- SKILLS -->
+
+                <div class="box">
+
+                    <div class="media-box">
+
+                        <h2>Skills</h2>
+
+                        <ul class="skills">
+                            <li>Editing</li>
+                            <li>Drawing</li>
+                            <li>Designing</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HOBBIES -->
+
+                <div class="box">
+
+                    <div class="media-box">
+
+                        <h2>Hobbies</h2>
+
+                        <ol class="hobbies">
+                            <li>Sketching</li>
+                            <li>Reading</li>
+                            <li>Playing games</li>
+                        </ol>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TASK 5: IMAGE WITH ALT TEXT
+         ===================================================== -->
+
+    <section>
+
+        <div class="wrap">
+
+            <h2>My Favorite Picture</h2>
+
+            <figure>
+
+                <div class="media-box picture-box">
+
+                    <div class="picture-row">
+
+                        <img
+                            src="crizzia.jpg"
+                            alt="A favorite picture"
+                            width="100"
+                            height="100"
+                        >
+
+                        <img
+                            src="favorite-picture.jpg"
+                            alt="Another favorite picture"
+                            width="100"
+                            height="100"
+                        >
+
+                    </div>
+
+                    <figcaption>
+                        These are my favorite pictures.
+                    </figcaption>
+
+                </div>
+
+            </figure>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TASK 6: TABLE OF INFORMATION
+         ===================================================== -->
+
+    <section id="work">
+
+        <div class="wrap">
+
+            <h2>Websites I Use</h2>
+
+            <table>
+
+                <tr>
+                    <th>Name</th>
+                    <th>URL</th>
+                    <th>Description</th>
+                </tr>
+
+                <tr>
+                    <td>YouTube</td>
+
+                    <td>
+                        <a
+                            href="https://youtube.com"
+                            target="_blank"
+                        >
+                            Visit YouTube.com
+                        </a>
+                    </td>
+
+                    <td>
+                        A website with example resources and tutorials.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>TikTok</td>
+
+                    <td>
+                        <a
+                            href="https://tiktok.com"
+                            target="_blank"
+                        >
+                            Visit TikTok.com
+                        </a>
+                    </td>
+
+                    <td>
+                        A platform for videos and creative content.
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TASK 8: VIDEO EMBED
+         ===================================================== -->
+
+    <section>
+
+        <div class="wrap">
+
+            <h2>Something Worth Watching</h2>
+
+            <div class="media-container">
+
+                <!-- VIDEO 1 -->
+
+                <div class="media-box">
+
+                    <h3>My Wifey</h3>
+
+                    <video
+                        src="wifey.mp4"
+                        width="300"
+                        height="300"
+                        controls
+                    >
+                    </video>
+
+                </div>
+
+
+                <!-- VIDEO 2 -->
+
+                <div class="media-box">
+
+                    <h3>My Baby Munckin</h3>
+
+                    <video
+                        src="wifey01.mp4"
+                        width="300"
+                        height="300"
+                        controls
+                    >
+                    </video>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         WORTH LISTENING: AUDIO
+         ===================================================== -->
+
+    <section>
+
+        <div class="wrap">
+
+            <h2>Worth Listening</h2>
+
+            <div class="media-container">
+
+                <!-- AUDIO 1 -->
+
+                <div class="media-box">
+
+                    <h3>Charlie Puth - Dangerously</h3>
+
+                    <audio controls>
+                        <source
+                            src="Charlie Puth - Dangerously [Official Audio].mp3"
+                            type="audio/mpeg"
+                        >
+                    </audio>
+
+                </div>
+
+
+                <!-- AUDIO 2 -->
+
+                <div class="media-box">
+
+                    <h3>Jonas Brothers - Sucker</h3>
+
+                    <audio controls>
+                        <source
+                            src="Jonas Brothers - Sucker (Lyrics).mp3"
+                            type="audio/mpeg"
+                        >
+                    </audio>
+
+                </div>
+
+
+                <!-- AUDIO 3 -->
+
+                <div class="media-box">
+
+                    <h3>The Vamps - Somebody To You</h3>
+
+                    <audio controls>
+                        <source
+                            src="The Vamps - Somebody To You ft. Demi Lovato (Lyrics).mp3"
+                            type="audio/mpeg"
+                        >
+                    </audio>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TASK 7: CONTACT FORM
+         ===================================================== -->
+
+    <section id="contact">
+
+        <div class="wrap">
+
+            <h2>Get in Touch</h2>
+
+            <form onsubmit="return false;">
+
+                <label for="name">
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                >
+
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
+
+
+                <label for="color">
+                    Choose Your Favorite Color
+                </label>
+
+                <select id="color" name="color">
+
+                    <option value="red">Red</option>
+                    <option value="crimson">Crimson</option>
+                    <option value="scarlet">Scarlet</option>
+
+                    <option value="blue">Blue</option>
+                    <option value="navy">Navy</option>
+                    <option value="royalblue">RoyalBlue</option>
+
+                    <option value="green">Green</option>
+                    <option value="lime">Lime</option>
+                    <option value="olive">Olive</option>
+
+                    <option value="purple">Purple</option>
+                    <option value="violet">Violet</option>
+                    <option value="magenta">Magenta</option>
+
+                </select>
+
+
+                <button type="submit">
+                    Send message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         TASK 10: FOOTER WITH CONTACT INFORMATION
+         ===================================================== -->
+
+    <footer>
+
+        <div class="wrap">
+
+            <p>
+                Contact me at:
+
+                <a href="mailto:kurtjessiemolo94@gmail.com">
+                    kurtjessiemolo94@gmail.com
+                </a>
+            </p>
+
+            <address>
+                City/Country: Philippines<br>
+                Phone: 0987-527-4889
+            </address>
+
+            <p>
+
+                <a
+                    href="https://www.facebook.com/share/1FDwD9nERC/"
+                    target="_blank"
+                >
+                    My Facebook Profile
+                </a>
+
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
